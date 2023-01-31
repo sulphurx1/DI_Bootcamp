@@ -2,7 +2,7 @@
 const onSubmission = document.getElementById('lib-button');
 onSubmission.addEventListener('click', onClick, true);
 
-// creating class id
+// creating class name
 const btn = document.createElement('button');
 btn.innerHTML = 'Shuffle';
 btn.classList.add('shuffle');
