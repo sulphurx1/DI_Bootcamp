@@ -3,8 +3,8 @@ hotelCost()
 
 const cost = {
     london: '\$183',
-    paris: '\$220',
-    others: '\$300'
+     paris: '\$220',
+     others: '\$300'
 }
 
 function hotelCost() {
@@ -19,7 +19,7 @@ function hotelCost() {
     const costPerNight = 140;
     const totalPrice = numberOfNights * costPerNight;
 
-    console.log('totalPrice: ', totalPrice);
+    console.log('Hotel price: \$' + totalPrice);
 
     return totalPrice
 }
@@ -28,27 +28,28 @@ function isOnlyNumber(string) {
     const regex = new RegExp(/^[0-9]*$/);
     return regex.test(string);
 }
-planeRideCost();
+const price1 = planeRideCost();
+console.log('The plane price: ' + price1 )
 
 function planeRideCost() {
 
     let input = '';
 
     while(!isTheAnswer(input)) {
-        input = prompt('Where would you like to go?\n A. London\n B. Paris\n C.Others')
+        input = prompt('Where would you like to go?\n A. London\n B. Paris\n C. Others')
     }
-
-    console.log('The cost of travel is: ', input)
+    
     if(input === 'A') {
-        return cost.london
-    }  
-    if(input === 'B') {
-        return 'cost.paris';
+        return cost.london;
     }
-    if(input === 'C') {
-        return 'cost.others';
-    }  
-}
+    else if(input === 'B') {
+        return cost.paris;
+    }
+    else {
+        return cost.others;
+    }
+    
+    }
 
 function isTheAnswer(str) {
     const regex = new RegExp(/^[ABC]/g);
@@ -66,13 +67,13 @@ function rentalCarCost() {
 
     const dailyPrice = 40;
     const numberOfDays = answer;
-
+    let discount = 0;
     if(numberOfDays >= 10) {
         discount = 0.05;
     }
 
     const totalPrice = dailyPrice * numberOfDays *(1 - discount);
-    console.log('Total Price: ' + totalPrice);
+    console.log('Car price: \$' + totalPrice);
     return totalPrice
 }
 
