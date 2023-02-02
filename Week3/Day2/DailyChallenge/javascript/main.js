@@ -10,12 +10,7 @@ document.body.appendChild(btn);
 
 // shuffle button event
 const shuffleButton = document.getElementsByClassName('shuffle');
-shuffleButton[0].addEventListener('click', shuffleStories, true);
-
-// for random number generator
-const low = 1, high = 3;
-
-
+shuffleButton[0].addEventListener('click', shuffleStories);
 
 // get values as object
 function getValues() {
@@ -80,6 +75,12 @@ function onClick(event) {
 // shuffle button function
 function shuffleStories() {
 
+    // for random number generator
+    const numbers = randomNumberGenerator(1,3);
+
+    // declaring story
+    let story;
+
     //getting values from input
     const formValues = getValues()
     const noun = formValues.noun
@@ -88,25 +89,25 @@ function shuffleStories() {
     const verb = formValues.verb
     const place = formValues.place
 
-    if (randomNumberGenerator === 1) {
+    if (numbers === 1) {
         story = generatedStory1(noun, adjective, person, verb, place)
     }
-    else if(randomNumberGenerator === 2) {
+    else if(numbers === 2) {
         story = generatedStory2(noun, adjective, person, verb, place)
     }
     else{
         story = generatedStory3(noun, adjective, person, verb, place)
     }
     
-    // just gave up to try to move this
-    let story = generatedStory(noun, adjective, person, verb, place)
     appendGeneratedStory(story)
 }
 
 
 // generating random number from Math.floor()
 function randomNumberGenerator(low, high) {
-    return Math.floor(Math.random() * (high - low + 1) + low)
+    let value = (Math.random() * (high - low + 1)) + low;
+    value = Math.floor(value);
+    return value;
 }
 
 
