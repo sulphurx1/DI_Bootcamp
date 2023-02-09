@@ -10,6 +10,6 @@ for index in matrix:
 print(string)
 
 import re
-string = re.sub(r"\b[^a-zA-Z0-9]+\b", r" ",string)
+string = re.sub(r"[^a-zA-Z]+"," ",string)
 
 print(string)
