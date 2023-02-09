@@ -2,7 +2,7 @@
 items_purchase = {
     'Water': '$1',
     'Bread': '$3',
-    'TV': '$1000',
+    'TV': '$1,000',
     'Fertilizer': '$20'
 }
 
@@ -17,7 +17,7 @@ for item in list(items_purchase):
 
     # converting string value of price to integer as comparing was not working and removing "$" symbol
     # getting value with .get(item)
-    price = int(items_purchase.get(item).replace('$', ''))
+    price = int(items_purchase.get(item).replace('$', '').replace(',', ''))
 
     # if the price of the product is higher than wallet pop that item from dictionary
     if(price > wallet):
@@ -28,5 +28,5 @@ if(len(items_purchase) == 0):
     print('Nothing')
 
 # printing the list of item purchasale
-print(items_purchase.keys())
+print(sorted(items_purchase.keys()))
 
