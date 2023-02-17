@@ -1,12 +1,14 @@
 class Farm():
     def __init__(self, name):
         self.name = name
-        print(f'{self.name}'+ 's farm')
+        self.animal ={}
 
-    def add_animal(self, type, amount):
-        self.type = type
-        self.amount = amount
-        print(f'{self.type} : {self.amount}')
+    def add_animal(self, type):
+        count = 1
+        if type in self.animal:
+            self.animal[type] += count
+        else:
+            self.animal[type] = count
 
     def get_info(self):
         print(f'E-I-E-I-0!')
