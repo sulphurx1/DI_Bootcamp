@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM actors WHERE (age <= '2000-01-01')

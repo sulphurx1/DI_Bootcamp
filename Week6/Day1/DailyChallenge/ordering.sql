@@ -1,0 +1,1 @@
+SELECT * FROM actors WHERE age > '1960-01-01' ORDER BY first_name ASC
