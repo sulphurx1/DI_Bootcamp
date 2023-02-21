@@ -1,0 +1,3 @@
+INSERT INTO SecondTab VALUES
+(5),
+(NULL)

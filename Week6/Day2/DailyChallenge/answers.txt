@@ -1,0 +1,19 @@
+Q1.
+// count should return value of 3 since id "5","6" and "7" are not in id "null" from second tab
+
+// acutal answer: 0
+
+Q2.
+// count should return value of 1 since id "5" is in the second tab
+
+// actual answer: 4
+
+Q3.
+// count should return value of 0 since there is id which can be found in the second tab
+
+// acutal answer: 0
+
+Q4.
+// count should return value of 1 since 1 is in second tab
+
+// actual answer: 4
