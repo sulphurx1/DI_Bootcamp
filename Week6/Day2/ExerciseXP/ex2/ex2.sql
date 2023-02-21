@@ -1,0 +1,15 @@
+-- SELECT * FROM customer
+-- SELECT first_name, last_name AS full_name FROM customer
+-- SELECT create_date FROM customer GROUP BY create_date ORDER BY min(create_date)
+-- SELECT first_name FROM customer ORDER BY first_name DESC
+-- SELECT film_id, title, description, release_year, rental_rate FROM film ORDER BY rental_rate 
+-- SELECT phone FROM address WHERE district = 'Texas'
+-- SELECT * FROM film WHERE film_id = 15 OR film_id = 150
+-- SELECT film_id, title, description, length, rental_rate FROM film WHERE title LIKE '%favorite_movies%'
+-- SELECT film_id, title, description, length, rental_rate FROM film WHERE title ILIKE 'al%'
+-- SELECT film_id, title, description, length, rental_rate FROM film ORDER BY rental_rate FETCH FIRST 10 ROWS ONLY
+-- SELECT film_id, title, description, length, rental_rate FROM film ORDER BY rental_rate OFFSET 10 ROWS FETCH FIRST 10 ROWS ONLY
+-- SELECT first_name, last_name, amount, payment_date FROM customer FULL JOIN payment ON customer.customer_id = payment.payment_id;
+-- SELECT * FROM film FULL OUTER JOIN inventory ON film.film_id = inventory.inventory_id WHERE film.film_id NOT IN (inventory.film_id)
+-- SELECT country_id, country FROM country
+SELECT customer.first_name, customer.last_name, payment.amount, payment.payment_date FROM customer JOIN payment ON customer.customer_id = payment.payment_id JOIN staff ON staff.staff_id = payment.payment_id ORDER BY staff_id;
