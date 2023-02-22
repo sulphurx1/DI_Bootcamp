@@ -1,0 +1,3 @@
+-- SELECT customer.first_name, customer_profile.isloggedIn FROM customer FULL OUTER JOIN customer_profile ON customer.id = customer_profile.id GROUP BY customer.first_name, customer_profile.isloggedIn HAVING isloggedIn = TRUE;
+-- SELECT customer.first_name, customer_profile.isloggedIn FROM customer FULL OUTER JOIN customer_profile ON customer.id = customer_profile.id;
+SELECT customer.first_name, customer_profile.isloggedIn FROM customer RIGHT JOIN customer_profile ON customer.id = customer_profile.id GROUP BY customer.first_name, customer_profile.isloggedIn HAVING isloggedIn = false;

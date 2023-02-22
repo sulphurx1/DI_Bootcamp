@@ -1,0 +1,5 @@
+CREATE TABLE student(
+student_id SERIAL PRIMARY KEY,
+	name CHARACTER VARYING (100) NOT NULL,
+	age INTEGER NOT NULL CHECK (age <= 15)
+)
