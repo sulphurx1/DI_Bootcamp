@@ -1,0 +1,8 @@
+{% block content %}
+<h1>Rentals</h1>
+<ul>
+    {% for rental in rental_list %}
+    <li>{{ rental }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
